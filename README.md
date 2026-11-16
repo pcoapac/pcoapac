@@ -15,7 +15,7 @@
 - `config/forum.yml` — categories, tags and key settings 板块、标签、主要设置
 - `theme/pest-atlas/` — homepage pest atlas component 首页害虫图谱组件
 - `branding/` — logo & icon
-- `GOVERNANCE.md` — who decides what 治理规则
+- `GOVERNANCE.md` — who decides what 治理规则 
 
 ## License 协议
 Code: MIT. Wiki & design content: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
