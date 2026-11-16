@@ -1,0 +1,99 @@
+---
+site_settings:
+  title: PCOAPAC — Open Pest Control Community
+  site_description: A neutral, free and open community for pest control professionals
+    worldwide. 中立、开放、永久免费的全球虫控行业社区。
+  short_site_description: Open pest control community
+  default_locale: en
+  allow_user_locale: true
+  set_locale_from_accept_language_header: true
+  tagging_enabled: true
+  top_menu: categories|latest|new|top
+  desktop_category_page_style: categories_only
+  fixed_category_positions: true
+  solved_enabled: true
+  approve_post_count: 1
+  edit_wiki_post_allowed_groups: 1|2|11
+  tl1_requires_topics_entered: 5
+  tl1_requires_read_posts: 30
+  tl1_requires_time_spent_mins: 10
+  tl2_requires_days_visited: 15
+  tl2_requires_likes_received: 1
+  discourse_reactions_enabled_reactions: heart|+1|-1|laughing|open_mouth|clap
+categories:
+- slug: whats-this-pest
+  name: What's This Pest? 这是什么虫
+  description: Post a photo, get an ID from pros. 拍照提问，专业人士帮你认虫。
+  position: 0
+  wiki_by_default: false
+  accepted_answers: true
+- slug: pest-stories
+  name: Pest Stories 虫事趣闻
+  description: Weird, funny and amazing pest stories from the field. 离奇、搞笑、震撼的虫事现场。
+  position: 1
+  wiki_by_default: false
+  accepted_answers: false
+- slug: field-tips
+  name: Field Tips 实战技巧
+  description: One photo, one tip — practical pest control skills. 一图一招，实战技巧分享。
+  position: 2
+  wiki_by_default: false
+  accepted_answers: false
+- slug: industry-news
+  name: Industry News 行业资讯
+  description: Pest control industry news worldwide. 全球虫控行业资讯。
+  position: 3
+  wiki_by_default: false
+  accepted_answers: false
+- slug: control-methods
+  name: Control Methods 防治技术
+  description: IPM, treatments and methods Q&amp;A. 综合防治与防治方法问答。
+  position: 4
+  wiki_by_default: false
+  accepted_answers: true
+- slug: pest-id
+  name: Pest Biology 虫害生物学
+  description: Biology and behaviour of pests. 害虫的生物学与习性。
+  position: 5
+  wiki_by_default: false
+  accepted_answers: false
+- slug: products-equipment
+  name: Products & Equipment 产品与设备
+  description: Products, traps, devices — disclose if you are a vendor. 产品、捕器、设备；厂商请表明身份。
+  position: 6
+  wiki_by_default: false
+  accepted_answers: false
+- slug: regulations
+  name: Regulations 法规与认证
+  description: Pesticide &amp; biocide rules by country. 各国药剂法规。
+  position: 7
+  wiki_by_default: false
+  accepted_answers: false
+- slug: market-business
+  name: Market & Business 市场与经营
+  description: Running a PCO business. 虫控公司经营。
+  position: 8
+  wiki_by_default: false
+  accepted_answers: false
+- slug: wiki
+  name: Wiki 知识库
+  description: Open knowledge base anyone can edit. 人人可编辑的开放知识库。
+  position: 9
+  wiki_by_default: true
+  accepted_answers: false
+- slug: community
+  name: Community 社区建设
+  description: Announcements, feedback, volunteers. 公告、建议、志愿者。
+  position: 10
+  wiki_by_default: false
+  accepted_answers: false
+tags:
+- ants-termites
+- bed-bugs
+- birds
+- cockroaches
+- flies
+- mosquitoes
+- other-pests
+- rodents
+- stored-product-pests

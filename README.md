@@ -18,3 +18,8 @@
 
 ## License 协议
 Code: MIT. Wiki & design content: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+## Contributors 贡献者
+Every merged change earns a place here and the **Contributor** badge on the forum. 每个被合并的贡献都会出现在这里，并获得论坛「贡献者」徽章。
+
+[![Contributors](https://contrib.rocks/image?repo=pcoapac/pcoapac)](https://github.com/pcoapac/pcoapac/graphs/contributors)

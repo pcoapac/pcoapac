@@ -1,0 +1,44 @@
+name: Forum discussion thread
+on:
+  pull_request_target:
+    types: [opened, closed]
+permissions:
+  pull-requests: write
+jobs:
+  forum:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open or update the forum thread for this PR
+        env:
+          FORUM_API_KEY: ${{ secrets.FORUM_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_ACTION: ${{ github.event.action }}
+          PR_MERGED: ${{ github.event.pull_request.merged }}
+          PR_NUM: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, subprocess
+          F = "https://forum.pcoapac.com"
+          H = {"Api-Key": os.environ["FORUM_API_KEY"], "Api-Username": "pcoapac_bot", "Content-Type": "application/json"}
+          def call(m, p, d=None):
+              r = urllib.request.Request(F + p, method=m, headers=H, data=json.dumps(d).encode() if d else None)
+              return json.load(urllib.request.urlopen(r, timeout=30))
+          e = os.environ; num = e["PR_NUM"]; tag = f"[PR #{num}]"
+          cid = next(c["id"] for c in call("GET", "/categories.json")["category_list"]["categories"] if c["slug"] == "community")
+          if e["PR_ACTION"] == "opened":
+              body = (e.get("PR_BODY") or "").strip()[:800]
+              quote = "\n".join("> " + l for l in body.splitlines())
+              raw = (f"**@{e['PR_AUTHOR']}** proposed a change on GitHub · 在 GitHub 提交了修改：\n\n{e['PR_URL']}\n\n{quote}\n\n"
+                     "👍 / 👎 / comment below — maintainers read this thread before merging.\n点赞、点踩、评论，维护者合并前会参考这里的意见。")
+              t = call("POST", "/posts.json", {"title": f"🛠 {tag} {e['PR_TITLE']} — community review"[:200], "raw": raw, "category": cid})
+              subprocess.run(["gh", "pr", "comment", num, "--repo", e["REPO"], "--body", f"💬 Community discussion · 社区讨论：{F}/t/{t['topic_id']}"])
+          elif e["PR_ACTION"] == "closed" and e["PR_MERGED"] == "true":
+              tid = next((t["id"] for t in call("GET", f"/c/community/{cid}.json")["topic_list"]["topics"] if tag in t["title"]), None)
+              if tid:
+                  call("POST", "/posts.json", {"topic_id": tid, "raw": f"✅ Merged — thank you @{e['PR_AUTHOR']}! Log in to the forum with GitHub to receive the **Contributor** badge.\n已合并，感谢贡献！用 GitHub 登录论坛即可获得「贡献者」徽章。"})
+          PY
