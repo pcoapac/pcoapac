@@ -1,26 +1,40 @@
 # PCOAPAC — Open Pest Control Community
-**https://forum.pcoapac.com** · A neutral, non-commercial, free-forever community for pest control professionals worldwide.
-中立、非商业、永久免费的全球虫控行业社区。  
 
+**Official Forum**: [https://forum.pcoapac.com](https://forum.pcoapac.com)  
+A neutral, free-forever, and open-source community platform for pest control professionals, entomologists, and technicians worldwide.
 
-## Ways to contribute 参与方式
-| You want to… 你想… | Where 在哪里 |
+---
+
+## Ways to Contribute
+
+| Goal | Where to Participate |
 |---|---|
-| Ask "what's this pest?" / share field experience 提问、分享经验 | [Forum](https://forum.pcoapac.com) |
-| Improve the Pest ID / Regulations / IPM wiki 完善知识库 | Forum **Wiki** category — click *Edit* on any wiki post |
-| Propose a new category, feature or rule 提建议 | Forum **Community** category (we vote with polls) |
-| Improve the forum itself: theme, design, logo, translations 改造论坛本身 | This repo — see [CONTRIBUTING.md](CONTRIBUTING.md) |
+| Ask "What's This Pest?" / Share Field Tips | [PCOAPAC Forum](https://forum.pcoapac.com) |
+| Improve Pest Identification, Regulations & IPM Knowledge | Forum **Wiki** Category (Click *Edit* on any wiki post) |
+| Propose a New Feature, Rule, or Category | Forum **Community** Category (Open community poll) |
+| Improve the Platform Codebase, Themes & Components | This Repository — see [CONTRIBUTING.md](CONTRIBUTING.md) |
 
-## Contents 仓库内容
-- `config/forum.yml` — categories, tags and key settings 板块、标签、主要设置
-- `theme/pest-atlas/` — homepage pest atlas component 首页害虫图谱组件
-- `branding/` — logo & icon
-- `GOVERNANCE.md` — who decides what 治理规则
+---
 
-## License 协议
-Code: MIT. Wiki & design content: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+## Repository Structure
 
-## Contributors 贡献者
-Every merged change earns a place here and the **Contributor** badge on the forum. 每个被合并的贡献都会出现在这里，并获得论坛「贡献者」徽章。
+* `config/forum.yml` — Forum category taxonomy, tag definitions, and core settings.
+* `theme/pest-atlas/` — Frontend Pest Atlas homepage interactive component.
+* `branding/` — Official PCOAPAC logos, icons, and vector graphics.
+* `GOVERNANCE.md` — Transparent community governance and decision framework.
+* `CONTRIBUTING.md` — Step-by-step contribution instructions for developers and researchers.
+
+---
+
+## License
+
+* **Code**: [MIT License](LICENSE)
+* **Wiki & Educational Content**: [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+---
+
+## Contributors
+
+Every merged contribution earns a spot on this leaderboard and grants the official **Contributor** badge and title on the forum.
 
 [![Contributors](https://contrib.rocks/image?repo=pcoapac/pcoapac)](https://github.com/pcoapac/pcoapac/graphs/contributors)

@@ -1,6 +1,33 @@
-# Contributing 贡献指南
-1. **Open an issue first** describing the change (bug, design idea, translation). 先开 Issue 说明想改什么。
-2. Fork → change → open a **Pull Request**. Keep each PR small and focused. Fork 后改动，提交 PR，每个 PR 只做一件事。
-3. Every PR gets its own discussion thread on the forum where the community can like, dislike and comment. 每个 PR 会在论坛自动开讨论帖，社区可以点赞、点踩、评论。
-4. A maintainer reviews within 7 days. Merged changes go live on the forum, and you get the **Contributor** badge. 维护者 7 天内审核，合并后上线，贡献者获得论坛「贡献者」徽章。
-5. Never commit secrets, server addresses or personal data. 不要提交密钥、服务器地址或个人信息。
+# Contributing to PCOAPAC
+
+Welcome! PCOAPAC is a neutral, free, open-source community platform and pest knowledge base for pest management professionals worldwide.
+
+We welcome contributions of all kinds: bug fixes, design improvements, Pest Atlas entries, and documentation.
+
+---
+
+## How to Contribute
+
+1. **Open an Issue First**:
+   * Before starting major work, open an Issue describing what you would like to change (bug fix, new feature, IPM wiki improvement, or theme enhancement).
+2. **Fork and Branch**:
+   * Fork the repository to your GitHub account and create a dedicated branch for your change:
+     ```bash
+     git checkout -b feature/my-new-improvement
+     ```
+3. **Keep Pull Requests Focused**:
+   * Keep each PR small, modular, and focused on a single change.
+4. **Community Discussion**:
+   * Every Pull Request automatically links to a community discussion thread on the forum where members can review, comment, and test.
+5. **Review & Merge**:
+   * Maintainers review PRs within 7 days.
+   * Once merged, your changes go live on [forum.pcoapac.com](https://forum.pcoapac.com), and your GitHub profile is added to our Contributors list.
+   * You will also receive the official **Contributor** badge and flair on the forum!
+
+---
+
+## Guidelines & Standards
+
+* **Language**: All contributions, code comments, and documentation must be in English.
+* **Neutrality**: Keep all content scientific, objective, and compliant with international IPM best practices.
+* **Privacy & Security**: Never commit API keys, secrets, server IP addresses, or personal customer data.
